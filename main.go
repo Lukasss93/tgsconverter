@@ -1,11 +1,11 @@
 package main
+
 import "fmt"
 import "io/ioutil"
 import "path/filepath"
 import "os"
 import "strings"
-
-import "github.com/Benau/tgsconverter/libtgsconverter"
+import "libtgsconverter"
 
 func main() {
     // check if the user provided 3 arguments
