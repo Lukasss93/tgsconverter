@@ -5,6 +5,7 @@ import "errors"
 import "compress/gzip"
 import "image"
 import "io/ioutil"
+import "fmt"
 
 import "github.com/Benau/go_rlottie"
 
@@ -130,6 +131,7 @@ func ImportFromData(data []byte, options ConverterOptions) ([]byte, error) {
 		if !writer.SupportsAnimation() {
 			break
 		}
+		fmt.Println(fmt.Sprintf("Frame: %d/%d", frame, frame_count))
 	}
 	go_rlottie.LottieAnimationDestroy(animation)
 	return writer.Result(), nil
